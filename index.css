@@ -474,6 +474,15 @@ body {
     padding: 0.5rem 1.25rem;
     min-width: 90px;
   }
+
+  .quiz-footer-actions {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .quiz-footer-actions .btn {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 120px;
+  }
 }
 
 /* Canvas controls toolbar */
@@ -1050,6 +1059,35 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
   gap: 0.75rem;
+}
+
+/* Decouple height & aspect ratio in quiz mode for mobile portrait compatibility */
+.canvas-wrapper.quiz-active {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  min-height: 380px;
+}
+
+.canvas-wrapper.quiz-active .quiz-overlay {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 380px;
+  display: flex !important;
+  padding: 1.25rem 1rem;
+}
+
+.canvas-wrapper.quiz-active .quiz-container {
+  height: auto !important;
+  justify-content: flex-start !important;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .canvas-wrapper.quiz-active,
+  .canvas-wrapper.quiz-active .quiz-overlay {
+    min-height: 340px !important;
+  }
 }
 
 .quiz-card-header {

@@ -1392,6 +1392,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function setPlayMode(mode) {
     currentPlayMode = mode;
     clearBoard();
+    const canvasWrapper = document.querySelector(".canvas-wrapper");
 
     if (mode === "trace") {
       btnPlayTrace.classList.add("active");
@@ -1403,6 +1404,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".canvas-toolbar").style.display = "flex";
       document.querySelector(".auto-recognize-status").style.display = "flex";
       quizOverlay.style.display = "none";
+      if (canvasWrapper) canvasWrapper.classList.remove("quiz-active");
       lblBoardTip.innerText = "Trace the letter below";
       logEngine("Playroom mode updated to: Guided Tracing", "log");
       updateTraceGuideLetter();
@@ -1417,6 +1419,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".canvas-toolbar").style.display = "flex";
       document.querySelector(".auto-recognize-status").style.display = "flex";
       quizOverlay.style.display = "none";
+      if (canvasWrapper) canvasWrapper.classList.remove("quiz-active");
       lblBoardTip.innerText = "Write any letter/blend (e.g. FL) on the blank board";
       logEngine("Playroom mode updated to: Advanced Free Write (AI Guess)", "log");
     } else if (mode === "quiz") {
@@ -1429,6 +1432,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".canvas-toolbar").style.display = "none";
       document.querySelector(".auto-recognize-status").style.display = "none";
       quizOverlay.style.display = "flex";
+      if (canvasWrapper) canvasWrapper.classList.add("quiz-active");
       lblBoardTip.innerText = "Fill in the blank by tapping the correct word!";
       logEngine("Playroom mode updated to: Fun Fill-in-the-Blank Quiz", "log");
       loadNextQuizQuestion(true); // reset score and load first question
