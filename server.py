@@ -2,7 +2,7 @@ import http.server
 import socketserver
 import os
 
-PORT = 8000
+PORT = int(os.environ.get("PORT", 8000))
 
 class MyHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
@@ -13,8 +13,11 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
 # Change directory to the server file's folder
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
-    print(f"Serving Vaishnavi Project at http://localhost:{PORT}")
+# Allow port reuse to avoid 'Address already in use' errors on quick redeploys
+socketserver.TCPServer.allow_reuse_address = True
+
+with socketserver.TCPServer(("0.0.0.0", PORT), MyHandler) as httpd:
+    print(f"Serving Vaishnavi Project at http://0.0.0.0:{PORT}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
