@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: vaishnavis-playroom
+    runtime: static
+    buildCommand: ""
+    publishPath: "."
