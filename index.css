@@ -1058,3 +1058,16 @@ input:checked + .slider:before {
   50% { transform: scale(1.03); box-shadow: 0 5px 12px rgba(180, 83, 9, 0.3), 0 5px 0 #1e293b; }
   100% { transform: scale(1); }
 }
+
+.vocab-meaning {
+  font-family: var(--font-play);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 0.35rem 0.75rem;
+  margin-top: -0.25rem;
+  display: inline-block;
+}

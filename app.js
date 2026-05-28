@@ -104,6 +104,134 @@ document.addEventListener("DOMContentLoaded", () => {
     "द्ध": { word: "बुद्ध", emoji: "🧘", components: "द और ध" }
   };
 
+  const VOCABULARY_TE_SINGLE = {
+    "అ": { word: "అమ్మ", emoji: "👩", translit: "Amma", meaning: "Mother" },
+    "ఆ": { word: "ఆవు", emoji: "🐄", translit: "Aavu", meaning: "Cow" },
+    "ఇ": { word: "ఇల్లు", emoji: "🏠", translit: "Illu", meaning: "House" },
+    "ఈ": { word: "ఈక", emoji: "🪶", translit: "Eeka", meaning: "Feather" },
+    "ఉ": { word: "ఉడుత", emoji: "🐿️", translit: "Uduta", meaning: "Squirrel" },
+    "ఊ": { word: "ఊయల", emoji: "🛝", translit: "Ooyala", meaning: "Swing" },
+    "ఎ": { word: "ఎలుక", emoji: "🐀", translit: "Eluka", meaning: "Rat" },
+    "ఏ": { word: "ఏనుగు", emoji: "🐘", translit: "Eenugu", meaning: "Elephant" },
+    "ఐ": { word: "ఐదు", emoji: "🖐️", translit: "Aidu", meaning: "Five" },
+    "ఒ": { word: "ఒంటె", emoji: "🐫", translit: "Onte", meaning: "Camel" },
+    "ఓ": { word: "ఓడ", emoji: "🚢", translit: "Oda", meaning: "Ship" },
+    "ఔ": { word: "ఔషధం", emoji: "💊", translit: "Aushadham", meaning: "Medicine" },
+    "క": { word: "కలము", emoji: "✒️", translit: "Kalamu", meaning: "Pen" },
+    "ఖ": { word: "ఖడ్గం", emoji: "🗡️", translit: "Khadgam", meaning: "Sword" },
+    "గ": { word: "గడియారం", emoji: "⏰", translit: "Gadiyaram", meaning: "Clock" },
+    "ఘ": { word: "ఘటం", emoji: "🏺", translit: "Ghatam", meaning: "Pot" },
+    "చ": { word: "చక్రం", emoji: "🎡", translit: "Chakram", meaning: "Wheel" },
+    "ఛ": { word: "ఛత్రి", emoji: "☂️", translit: "Chhatri", meaning: "Umbrella" },
+    "జ": { word: "జలజ", emoji: "🪷", translit: "Jalaja", meaning: "Lotus" },
+    "ఝ": { word: "ఝషం", emoji: "🐟", translit: "Jhasham", meaning: "Fish" },
+    "ట": { word: "టమాటా", emoji: "🍅", translit: "Tamata", meaning: "Tomato" },
+    "ఠ": { word: "కంఠం", emoji: "🗣️", translit: "Kantham", meaning: "Throat/Neck" },
+    "డ": { word: "డమరుకం", emoji: "🪘", translit: "Damarukam", meaning: "Drum" },
+    "ఢ": { word: "ఢంకా", emoji: "🥁", translit: "Dhanka", meaning: "Big Drum" },
+    "త": { word: "తబలా", emoji: "🪘", translit: "Tabala", meaning: "Tabla" },
+    "థ": { word: "రథము", emoji: "🛞", translit: "Rathamu", meaning: "Chariot" },
+    "ద": { word: "దంతము", emoji: "🦷", translit: "Danthamu", meaning: "Tooth" },
+    "ధ": { word: "ధనస్సు", emoji: "🏹", translit: "Dhanassu", meaning: "Bow" },
+    "న": { word: "నగ", emoji: "💎", translit: "Naga", meaning: "Jewel" },
+    "ప": { word: "పలక", emoji: "📋", translit: "Palaka", meaning: "Slate" },
+    "ఫ": { word: "ఫలము", emoji: "🍎", translit: "Phalamu", meaning: "Fruit" },
+    "బ": { word: "బంతి", emoji: "⚽", translit: "Banthi", meaning: "Ball" },
+    "భ": { word: "భల్లూకం", emoji: "🐻", translit: "Bhallookam", meaning: "Bear" },
+    "మ": { word: "మంచం", emoji: "🛏️", translit: "Mancham", meaning: "Cot" },
+    "య": { word: "యంత్రం", emoji: "⚙️", translit: "Yanthram", meaning: "Machine" },
+    "ర": { word: "రవి", emoji: "☀️", translit: "Ravi", meaning: "Sun" },
+    "ల": { word: "లత", emoji: "🌿", translit: "Latha", meaning: "Creeper/Vine" },
+    "వ": { word: "వల", emoji: "🕸️", translit: "Vala", meaning: "Net" },
+    "శ": { word: "శంఖం", emoji: "🐚", translit: "Shankham", meaning: "Conch" },
+    "ష": { word: "షట్కోణం", emoji: "⬡", translit: "Shatkonam", meaning: "Hexagon" },
+    "స": { word: "సంచి", emoji: "🛍️", translit: "Sanchi", meaning: "Bag" },
+    "హ": { word: "హంస", emoji: "🦢", translit: "Hamsa", meaning: "Swan" }
+  };
+
+  const VOCABULARY_TE_BLENDS = {
+    "క్క": { word: "అక్క", emoji: "👩", translit: "Akka", meaning: "Elder Sister", components: "క వత్తు" },
+    "గ్గ": { word: "మొగ్గ", emoji: "🪷", translit: "Mogga", meaning: "Flower Bud", components: "గ వత్తు" },
+    "చ్చ": { word: "పచ్చడి", emoji: "🥣", translit: "Pachadi", meaning: "Pickle", components: "చ వత్తు" },
+    "జ్జ": { word: "గజ్జెలు", emoji: "🔔", translit: "Gajjelu", meaning: "Anklets", components: "జ వత్తు" },
+    "ట్ట": { word: "పెట్టె", emoji: "📦", translit: "Pette", meaning: "Box", components: "ట వత్తు" },
+    "డ్డ": { word: "లడ్డు", emoji: "🧆", translit: "Laddu", meaning: "Sweet Ball", components: "డ వత్తు" },
+    "త్త": { word: "నత్త", emoji: "🐌", translit: "Natha", meaning: "Snail", components: "త వత్తు" },
+    "ద్ద": { word: "ఎద్దు", emoji: "🐂", translit: "Eddu", meaning: "Ox", components: "ద వత్తు" },
+    "న్న": { word: "అన్న", emoji: "👦", translit: "Anna", meaning: "Elder Brother", components: "న వత్తు" },
+    "ప్ప": { word: "కప్ప", emoji: "🐸", translit: "Kappa", meaning: "Frog", components: "ప వత్తు" },
+    "బ్బ": { word: "మబ్బు", emoji: "☁️", translit: "Mabbu", meaning: "Cloud", components: "బ వత్తు" },
+    "మ్మ": { word: "అమ్మ", emoji: "👩", translit: "Amma", meaning: "Mother", components: "మ వత్తు" },
+    "య్య": { word: "కొయ్య", emoji: "🪵", translit: "Koyya", meaning: "Wood/Stick", components: "య వత్తు" },
+    "ర్ర": { word: "జుర్రు", emoji: "🍜", translit: "Jurru", meaning: "Slurp", components: "ర వత్తు" },
+    "ల్ల": { word: "పిల్లి", emoji: "🐱", translit: "Pilli", meaning: "Cat", components: "ల వత్తు" },
+    "వ్వ": { word: "పువ్వు", emoji: "🌸", translit: "Puvvu", meaning: "Flower", components: "వ వత్తు" }
+  };
+
+  const VOCABULARY_KN_SINGLE = {
+    "ಅ": { word: "ಅಮ್ಮ", emoji: "👩", translit: "Amma", meaning: "Mother" },
+    "ಆ": { word: "ಆನೆ", emoji: "🐘", translit: "Aane", meaning: "Elephant" },
+    "ಇ": { word: "ಇಲಿ", emoji: "🐀", translit: "Ili", meaning: "Rat" },
+    "ಈ": { word: "ಈಜು", emoji: "🏊", translit: "Eeju", meaning: "Swim" },
+    "ಉ": { word: "ಉಡುಗೊರೆ", emoji: "🎁", translit: "Udugore", meaning: "Gift" },
+    "ಊ": { word: "ಊಟ", emoji: "🍽️", translit: "Oota", meaning: "Meal" },
+    "ಎ": { word: "ಎಲೆ", emoji: "🍃", translit: "Ele", meaning: "Leaf" },
+    "ಏ": { word: "ಏಣಿ", emoji: "🪜", translit: "Eeni", meaning: "Ladder" },
+    "ಐ": { word: "ಐದು", emoji: "🖐️", translit: "Aidu", meaning: "Five" },
+    "ಒ": { word: "ಒಂಟೆ", emoji: "🐫", translit: "Onte", meaning: "Camel" },
+    "ಓ": { word: "ಓಡು", emoji: "🏃", translit: "Oodu", meaning: "Run" },
+    "ಔ": { word: "ಔಷಧ", emoji: "💊", translit: "Aushadha", meaning: "Medicine" },
+    "ಕ": { word: "ಕಮಲ", emoji: "🪷", translit: "Kamala", meaning: "Lotus" },
+    "ಖ": { word: "ಖಡ್ಗ", emoji: "🗡️", translit: "Khadga", meaning: "Sword" },
+    "ಗ": { word: "ಗಡಿಯಾರ", emoji: "⏰", translit: "Gadiyara", meaning: "Clock" },
+    "ಘ": { word: "ಘಟ", emoji: "🏺", translit: "Ghata", meaning: "Pot" },
+    "ಚ": { word: "ಚಮಚ", emoji: "🥄", translit: "Chamacha", meaning: "Spoon" },
+    "ಛ": { word: "ಛತ್ರಿ", emoji: "☂️", translit: "Chhatri", meaning: "Umbrella" },
+    "ಜ": { word: "ಜೇನು", emoji: "🐝", translit: "Jeenu", meaning: "Honey/Bee" },
+    "ಝ": { word: "ಝಷ", emoji: "🐟", translit: "Jhasha", meaning: "Fish" },
+    "ಟ": { word: "ಟೊಮೇಟೊ", emoji: "🍅", translit: "Tomato", meaning: "Tomato" },
+    "ಠ": { word: "ಕಂಠ", emoji: "🗣️", translit: "Kantha", meaning: "Throat/Voice" },
+    "ಡ": { word: "ಡಮರು", emoji: "🪘", translit: "Damaru", meaning: "Drum" },
+    "ಢ": { word: "ಢಕ್ಕೆ", emoji: "🥁", translit: "Dhakke", meaning: "Large Drum" },
+    "ತ": { word: "ತಬಲ", emoji: "🪘", translit: "Tabala", meaning: "Tabla" },
+    "ಥ": { word: "ರಥ", emoji: "🛞", translit: "Ratha", meaning: "Chariot" },
+    "ದ": { word: "ದಂತ", emoji: "🦷", translit: "Dantha", meaning: "Tooth" },
+    "ಧ": { word: "ಧನಸ್ಸು", emoji: "🏹", translit: "Dhanassu", meaning: "Bow" },
+    "ನ": { word: "ನಳ", emoji: "🚰", translit: "Nala", meaning: "Tap" },
+    "ಪ": { word: "ಪಟ", emoji: "🪁", translit: "Pata", meaning: "Kite" },
+    "ಫ": { word: "ಫಲ", emoji: "🍎", translit: "Phala", meaning: "Fruit" },
+    "ಬ": { word: "ಬಾಳೆಹಣ್ಣು", emoji: "🍌", translit: "Baalehannu", meaning: "Banana" },
+    "ಭ": { word: "ಭಲ್ಲೂಕ", emoji: "🐻", translit: "Bhallooka", meaning: "Bear" },
+    "ಮ": { word: "ಮರ", emoji: "🌳", translit: "Mara", meaning: "Tree" },
+    "ಯ": { word: "ಯಂತ್ರ", emoji: "⚙️", translit: "Yanthra", meaning: "Machine" },
+    "ರ": { word: "ರವಿ", emoji: "☀️", translit: "Ravi", meaning: "Sun" },
+    "ಲ": { word: "ಲತೆ", emoji: "🌿", translit: "Lathe", meaning: "Creeper/Vine" },
+    "ವ": { word: "ವನ", emoji: "🌲", translit: "Vana", meaning: "Forest" },
+    "ಶ": { word: "ಶಂಖ", emoji: "🐚", translit: "Shankha", meaning: "Conch" },
+    "ಷ": { word: "ಷಟ್ಕೋನ", emoji: "⬡", translit: "Shatkona", meaning: "Hexagon" },
+    "ಸ": { word: "ಸೇಬು", emoji: "🍎", translit: "Seebu", meaning: "Apple" },
+    "ಹ": { word: "ಹಂಸ", emoji: "🦢", translit: "Hamsa", meaning: "Swan" }
+  };
+
+  const VOCABULARY_KN_BLENDS = {
+    "ಕ್ಕ": { word: "ಅಕ್ಕ", emoji: "👩", translit: "Akka", meaning: "Elder Sister", components: "ಕ ಒತ್ತು" },
+    "ಗ್ಗ": { word: "ಮೊಗ್ಗು", emoji: "🪷", translit: "Moggu", meaning: "Flower Bud", components: "ಗ ಒತ್ತು" },
+    "ಚ್ಚ": { word: "ಚಚ್ಚು", emoji: "🔨", translit: "Chachhu", meaning: "Crush/Beat", components: "ಚ ಒತ್ತು" },
+    "ಜ್ಜ": { word: "ಗೆಜ್ಜೆ", emoji: "🔔", translit: "Gejje", meaning: "Anklet", components: "ಜ ಒತ್ತು" },
+    "ಟ್ಟ": { word: "ಪೆಟ್ಟಿಗೆ", emoji: "📦", translit: "Pettige", meaning: "Box", components: "ಟ ಒತ್ತು" },
+    "ಡ್ಡ": { word: "ಲಡ್ಡು", emoji: "🧆", translit: "Laddu", meaning: "Sweet Ball", components: "ಡ ಒತ್ತು" },
+    "ತ್ತ": { word: "ನತ್ತ", emoji: "🐌", translit: "Natha", meaning: "Snail/Nose-ring", components: "ತ ಒತ್ತು" },
+    "ದ್ದ": { word: "ಎತ್ತು", emoji: "🐂", translit: "Etthu", meaning: "Ox", components: "ದ ಒತ್ತು" },
+    "ನ್ನ": { word: "ಅಣ್ಣ", emoji: "👦", translit: "Anna", meaning: "Elder Brother", components: "ನ ಒತ್ತು" },
+    "ಪ್ಪ": { word: "ಕಪ್ಪೆ", emoji: "🐸", translit: "Kappe", meaning: "Frog", components: "ಪ ಒತ್ತು" },
+    "ಬ್ಬ": { word: "ಹಬ್ಬ", emoji: "🎉", translit: "Habba", meaning: "Festival", components: "ಬ ಒತ್ತು" },
+    "ಮ್ಮ": { word: "ಅಮ್ಮ", emoji: "👩", translit: "Amma", meaning: "Mother", components: "ಮ ಒತ್ತು" },
+    "ಯ್ಯ": { word: "ಗೆಳೆಯ", emoji: "👦", translit: "Geleya", meaning: "Friend", components: "ಯ ಒತ್ತು" },
+    "ರ್ರ": { word: "ಕರ್ನಾಟಕ", emoji: "🗺️", translit: "Karnataka", meaning: "Karnataka State", components: "ರ ಒತ್ತು" },
+    "ಲ್ಲ": { word: "ಹಲ್ಲಿ", emoji: "🦎", translit: "Halli", meaning: "Lizard", components: "ಲ ಒತ್ತು" },
+    "ವ್ವ": { word: "ಅವ್ವ", emoji: "👵", translit: "Avva", meaning: "Grandmother/Mother", components: "ವ ಒತ್ತು" }
+  };
+
   // State Management
   let currentLanguage = "en"; // "en" or "hi"
   let currentTab = "single"; // "single" or "blends" (for English)
@@ -147,6 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // UI control toggles
   const btnModeEn = document.getElementById("btnModeEn");
   const btnModeHi = document.getElementById("btnModeHi");
+  const btnModeTe = document.getElementById("btnModeTe");
+  const btnModeKn = document.getElementById("btnModeKn");
   const btnToggleSound = document.getElementById("btnToggleSound");
   const soundIcon = document.getElementById("soundIcon");
   const btnRepeatAudio = document.getElementById("btnRepeatAudio");
@@ -156,6 +286,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const boardEnglishBlends = document.getElementById("boardEnglishBlends");
   const boardHindiSingle = document.getElementById("boardHindiSingle");
   const boardHindiBlends = document.getElementById("boardHindiBlends");
+  const boardTeluguSingle = document.getElementById("boardTeluguSingle");
+  const boardTeluguBlends = document.getElementById("boardTeluguBlends");
+  const boardKannadaSingle = document.getElementById("boardKannadaSingle");
+  const boardKannadaBlends = document.getElementById("boardKannadaBlends");
   const keyboardTogglesRow = document.getElementById("keyboardTogglesRow");
   const tabEnSingle = document.getElementById("tabEnSingle");
   const tabEnBlends = document.getElementById("tabEnBlends");
@@ -204,9 +338,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   initVoices();
 
-  function getSpeechVoice(isHindi) {
-    if (isHindi) {
-      // Hindi: look for hi-IN or hi- Any premium voice
+  function getSpeechVoice(langCode) {
+    if (langCode === "te") {
+      const targetVoices = voicesList.filter(v => v.lang.replace('_', '-').startsWith("te-IN") || v.lang.startsWith("te"));
+      const premiumTeKeywords = ["Google తెలుగు", "Microsoft Shruti", "Shruti", "Siri Telugu", "Google", "Microsoft"];
+      for (const kw of premiumTeKeywords) {
+        const match = targetVoices.find(v => v.name.toLowerCase().includes(kw.toLowerCase()));
+        if (match) return match;
+      }
+      return targetVoices.length > 0 ? targetVoices[0] : null;
+    } else if (langCode === "kn") {
+      const targetVoices = voicesList.filter(v => v.lang.replace('_', '-').startsWith("kn-IN") || v.lang.startsWith("kn"));
+      const premiumKnKeywords = ["Google ಕನ್ನಡ", "Microsoft Heera", "Heera", "Siri Kannada", "Google", "Microsoft"];
+      for (const kw of premiumKnKeywords) {
+        const match = targetVoices.find(v => v.name.toLowerCase().includes(kw.toLowerCase()));
+        if (match) return match;
+      }
+      return targetVoices.length > 0 ? targetVoices[0] : null;
+    } else if (langCode === "hi") {
       const targetVoices = voicesList.filter(v => v.lang.replace('_', '-').startsWith("hi-IN") || v.lang.startsWith("hi"));
       const premiumHiKeywords = ["Google हिन्दी", "Sangeeta", "Lekha", "Veena", "Heera", "Kalpana", "Microsoft"];
       for (const kw of premiumHiKeywords) {
@@ -215,49 +364,48 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       return targetVoices.length > 0 ? targetVoices[0] : null;
     } else {
-      // English: search for premium en-US/en-GB voices
       const enVoices = voicesList.filter(v => v.lang.toLowerCase().startsWith("en"));
-      
-      // Prioritized warm, kid-friendly human voices
       const premiumEnKeywords = [
-        "samantha",          // Apple premium US
-        "google us english",  // Google US
-        "google uk english",  // Google UK
-        "aria",              // MS Edge neural
-        "jenny",             // MS Edge neural
-        "guy",               // MS Edge neural
-        "serena",            // Apple premium UK
-        "daniel",            // Apple premium UK
-        "zira",              // Windows default
-        "david",             // Windows default
-        "karen"              // Apple premium AU
+        "samantha",
+        "google us english",
+        "google uk english",
+        "aria",
+        "jenny",
+        "guy",
+        "serena",
+        "daniel",
+        "zira",
+        "david",
+        "karen"
       ];
-      
       for (const kw of premiumEnKeywords) {
         const match = enVoices.find(v => v.name.toLowerCase().includes(kw));
         if (match) return match;
       }
-      
-      // Fallback to en-US/en-GB standard
       const enUSGB = enVoices.filter(v => v.lang.toLowerCase().startsWith("en-us") || v.lang.toLowerCase().startsWith("en-gb"));
       if (enUSGB.length > 0) return enUSGB[0];
-      
       return enVoices.length > 0 ? enVoices[0] : null;
     }
   }
 
   // Auditory sequencing rule builder
-  function speakWordSequenced(letter, vocab, isHindi, praise = null) {
+  function speakWordSequenced(letter, vocab, langCode, praise = null) {
     if (!isSoundEnabled) return;
 
-    // Clear any active speak calls
     window.speechSynthesis.cancel();
     
     const seqId = ++activeSequenceId;
-    const activeVoice = getSpeechVoice(isHindi);
-    logEngine(`Using voice profile: ${activeVoice ? activeVoice.name : "System Default"} (${isHindi ? "Hindi" : "English"})`, 'tts');
+    const activeVoice = getSpeechVoice(langCode);
+    logEngine(`Using voice profile: ${activeVoice ? activeVoice.name : "System Default"} (${langCode})`, 'tts');
 
-    const speakSegment = (phrase, prePauseMs = 0, rateOverride = null) => {
+    const langParams = {
+      en: { pitch: 1.15, rate: 0.90 },
+      hi: { pitch: 1.0,  rate: 0.85 },
+      te: { pitch: 1.0,  rate: 0.85 },
+      kn: { pitch: 1.0,  rate: 0.85 }
+    };
+
+    const speakSegment = (phrase, prePauseMs = 0, rateOverride = null, langOverride = null) => {
       return new Promise((resolve) => {
         if (seqId !== activeSequenceId) {
           resolve();
@@ -269,10 +417,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
           }
           const utterance = new SpeechSynthesisUtterance(phrase);
-          if (activeVoice) utterance.voice = activeVoice;
+          const currentLang = langOverride || langCode;
+          const voice = getSpeechVoice(currentLang);
+          if (voice) utterance.voice = voice;
           utterance.volume = 1.0;
-          utterance.pitch = 1.0; // natural human pitch
-          utterance.rate = rateOverride || (isHindi ? 0.88 : 0.95); // natural speed for kids
+          
+          const params = langParams[currentLang] || { pitch: 1.0, rate: 0.90 };
+          utterance.pitch = params.pitch;
+          utterance.rate = rateOverride || params.rate;
           
           utterance.onend = () => resolve();
           utterance.onerror = () => resolve();
@@ -285,13 +437,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const checkAbort = () => seqId !== activeSequenceId;
 
       if (praise) {
-        await speakSegment(praise);
+        await speakSegment(praise, 0, null, "en");
         if (checkAbort()) return;
       }
 
-      if (isHindi) {
+      if (langCode === "hi") {
         if (vocab.components) {
-          // Hindi blend breakdown: "क और ष मिलकर बनता है क्ष। क्ष से कक्षा।"
           logEngine(`Audio out (Hindi Blend): "${vocab.components} मिलकर बनता है ${letter}। ${letter} से ${vocab.word}"`, 'tts');
           await speakSegment(`${vocab.components}`);
           if (checkAbort()) return;
@@ -299,41 +450,74 @@ document.addEventListener("DOMContentLoaded", () => {
           if (checkAbort()) return;
           await speakSegment(`${letter} से ${vocab.word}`, 300);
         } else {
-          // Hindi sequencing: "क से कमल"
           logEngine(`Audio out (Hindi): "${letter} से ${vocab.word}"`, 'tts');
           await speakSegment(`${letter} से ${vocab.word}`);
+        }
+      } else if (langCode === "te") {
+        if (vocab.components) {
+          logEngine(`Audio out (Telugu Blend): "${letter}, ఇది ${vocab.components}, ${vocab.word}"`, 'tts');
+          await speakSegment(letter, 0);
+          if (checkAbort()) return;
+          await speakSegment(`ఇది ${vocab.components}`, 250);
+          if (checkAbort()) return;
+          await speakSegment(vocab.word, 250);
+          if (checkAbort()) return;
+          await speakSegment(`means ${vocab.meaning}`, 250, null, "en");
+        } else {
+          logEngine(`Audio out (Telugu): "${letter}, ${vocab.word}"`, 'tts');
+          await speakSegment(letter, 0);
+          if (checkAbort()) return;
+          await speakSegment(vocab.word, 200);
+          if (checkAbort()) return;
+          await speakSegment(`means ${vocab.meaning}`, 250, null, "en");
+        }
+      } else if (langCode === "kn") {
+        if (vocab.components) {
+          logEngine(`Audio out (Kannada Blend): "${letter}, ಇದು ${vocab.components}, ${vocab.word}"`, 'tts');
+          await speakSegment(letter, 0);
+          if (checkAbort()) return;
+          await speakSegment(`ಇದು ${vocab.components}`, 250);
+          if (checkAbort()) return;
+          await speakSegment(vocab.word, 250);
+          if (checkAbort()) return;
+          await speakSegment(`means ${vocab.meaning}`, 250, null, "en");
+        } else {
+          logEngine(`Audio out (Kannada): "${letter}, ${vocab.word}"`, 'tts');
+          await speakSegment(letter, 0);
+          if (checkAbort()) return;
+          await speakSegment(vocab.word, 200);
+          if (checkAbort()) return;
+          await speakSegment(`means ${vocab.meaning}`, 250, null, "en");
         }
       } else {
         const isBlend = letter.length > 1;
         if (!isBlend) {
-          // English single letter: "A says ah. A for Apple... A, P, P, L, E"
-          logEngine(`Audio out (Single Phonics): "${letter} says ${vocab.phonic || letter}. ${letter} for ${vocab.word}"`, 'tts');
+          logEngine(`Audio out (Single Phonics): "${letter} says, ${vocab.phonic || letter}. ${letter} is for, ${vocab.word}!"`, 'tts');
           
           if (vocab.phonic) {
-            await speakSegment(`${letter} says ${vocab.phonic}`, 0);
+            await speakSegment(`${letter} says, ${vocab.phonic}!`, 0);
           } else {
-            await speakSegment(`${letter}`, 0);
+            await speakSegment(`${letter}!`, 0);
           }
           if (checkAbort()) return;
           
-          await speakSegment(`${letter} is for ${vocab.word}`, 200);
+          await speakSegment(`${letter} is for, ${vocab.word}!`, 200);
           if (checkAbort()) return;
           
           const spelling = vocab.word.toUpperCase().split('').join(', ');
           await speakSegment(spelling, 250);
         } else {
-          // English Multi-Letter Blend: "C, H says chuh. CH for Chair... C, H, A, I, R"
-          logEngine(`Audio out (Blend Phonics): "${letter.split('').join(' ')} says ${vocab.phonic || letter}. ${letter} for ${vocab.word}"`, 'tts');
+          logEngine(`Audio out (Blend Phonics): "${letter.split('').join(' ')} says, ${vocab.phonic || letter}. ${letter} is for, ${vocab.word}!"`, 'tts');
           
           const blendSpelling = letter.split('').join(', ');
           if (vocab.phonic) {
-            await speakSegment(`${blendSpelling} says ${vocab.phonic}`, 0);
+            await speakSegment(`${blendSpelling} says, ${vocab.phonic}!`, 0);
           } else {
-            await speakSegment(`${blendSpelling}`, 0);
+            await speakSegment(`${blendSpelling}!`, 0);
           }
           if (checkAbort()) return;
           
-          await speakSegment(`${letter} is for ${vocab.word}`, 200);
+          await speakSegment(`${letter} is for, ${vocab.word}!`, 200);
           if (checkAbort()) return;
           
           const spelling = vocab.word.toUpperCase().split('').join(', ');
@@ -471,8 +655,11 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.addEventListener("touchcancel", endDrawingPath);
 
   // 4. HANDWRITING RECOGNITION AND TRIGGER PIPELINE
-  async function recognizeHandwriting(strokes, isHindi) {
-    const itc = isHindi ? "hi-t-i0-handwrit" : "en-t-i0-handwrit";
+  async function recognizeHandwriting(strokes, lang) {
+    let itc = "en-t-i0-handwrit";
+    if (lang === "hi") itc = "hi-t-i0-handwrit";
+    else if (lang === "te") itc = "te-t-i0-handwrit";
+    else if (lang === "kn") itc = "kn-t-i0-handwrit";
     const url = `https://inputtools.google.com/request?ime=handwriting&app=demopage&itc=${itc}&cs=1&oe=utf-8&ie=utf-8`;
     
     const payload = {
@@ -484,7 +671,7 @@ document.addEventListener("DOMContentLoaded", () => {
           writing_area_height: canvas.height
         },
         ink: strokes,
-        language: isHindi ? "hi" : "en"
+        language: lang
       }]
     };
 
@@ -517,9 +704,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function getDynamicVocab(candidate, isHindi) {
-    if (isHindi) {
+  function getDynamicVocab(candidate, lang) {
+    if (lang === "hi") {
       if (VOCABULARY_HI[candidate]) return VOCABULARY_HI[candidate];
+      if (VOCABULARY_HI_BLENDS[candidate]) return VOCABULARY_HI_BLENDS[candidate];
+      return { word: candidate, emoji: "✏️" };
+    } else if (lang === "te") {
+      if (VOCABULARY_TE_SINGLE[candidate]) return VOCABULARY_TE_SINGLE[candidate];
+      if (VOCABULARY_TE_BLENDS[candidate]) return VOCABULARY_TE_BLENDS[candidate];
+      return { word: candidate, emoji: "✏️" };
+    } else if (lang === "kn") {
+      if (VOCABULARY_KN_SINGLE[candidate]) return VOCABULARY_KN_SINGLE[candidate];
+      if (VOCABULARY_KN_BLENDS[candidate]) return VOCABULARY_KN_BLENDS[candidate];
       return { word: candidate, emoji: "✏️" };
     }
     
@@ -527,7 +723,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (VOCABULARY_EN_SINGLE[upper]) return VOCABULARY_EN_SINGLE[upper];
     if (VOCABULARY_EN_BLENDS[upper]) return VOCABULARY_EN_BLENDS[upper];
     
-    // Dynamic lookup table for other common words they might write
     const wordMap = {
       "FLOWER": { word: "Flower", emoji: "🌸" },
       "TREE": { word: "Tree", emoji: "🌳" },
@@ -547,7 +742,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     if (wordMap[upper]) return wordMap[upper];
     
-    // Fallback: title-case the word
     const titleCase = candidate.charAt(0).toUpperCase() + candidate.slice(1).toLowerCase();
     return { word: titleCase, emoji: "🎨" };
   }
@@ -564,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= 600) {
       octx.font = "900 9rem Fredoka, comfortaa, sans-serif";
     }
-    octx.letterSpacing = (currentLanguage === "hi") ? "0px" : "-10px";
+    octx.letterSpacing = (currentLanguage === "hi" || currentLanguage === "te" || currentLanguage === "kn") ? "0px" : "-10px";
     octx.textAlign = "center";
     octx.textBaseline = "middle";
     octx.fillStyle = "black";
@@ -608,41 +802,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return Math.round(score);
   }
 
-  function getDynamicVocab(candidate, isHindi) {
-    if (isHindi) {
-      if (VOCABULARY_HI[candidate]) return VOCABULARY_HI[candidate];
-      if (VOCABULARY_HI_BLENDS[candidate]) return VOCABULARY_HI_BLENDS[candidate];
-      return { word: candidate, emoji: "✏️" };
-    }
-    
-    const upper = candidate.toUpperCase().trim();
-    if (VOCABULARY_EN_SINGLE[upper]) return VOCABULARY_EN_SINGLE[upper];
-    if (VOCABULARY_EN_BLENDS[upper]) return VOCABULARY_EN_BLENDS[upper];
-    
-    // Dynamic lookup table for other common words they might write
-    const wordMap = {
-      "FLOWER": { word: "Flower", emoji: "🌸" },
-      "TREE": { word: "Tree", emoji: "🌳" },
-      "STAR": { word: "Star", emoji: "⭐" },
-      "SUN": { word: "Sun", emoji: "☀️" },
-      "CAT": { word: "Cat", emoji: "🐱" },
-      "DOG": { word: "Dog", emoji: "🐶" },
-      "BALL": { word: "Ball", emoji: "⚽" },
-      "FISH": { word: "Fish", emoji: "🐟" },
-      "BIRD": { word: "Bird", emoji: "🐦" },
-      "CAR": { word: "Car", emoji: "🚗" },
-      "HOUSE": { word: "House", emoji: "🏠" },
-      "APPLE": { word: "Apple", emoji: "🍎" },
-      "ICE": { word: "Ice Cream", emoji: "🍦" },
-      "BOY": { word: "Boy", emoji: "👦" },
-      "GIRL": { word: "Girl", emoji: "👧" }
-    };
-    if (wordMap[upper]) return wordMap[upper];
-    
-    // Fallback: title-case the word
-    const titleCase = candidate.charAt(0).toUpperCase() + candidate.slice(1).toLowerCase();
-    return { word: titleCase, emoji: "🎨" };
-  }
+
 
   async function evaluateDrawing() {
     if (pointerTimer) {
@@ -655,10 +815,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     
-    let isHindi = currentLanguage === "hi";
+    let lang = currentLanguage;
 
     if (currentPlayMode === "trace") {
-      // Trace mode: Guided tracing helper
       const score = calculateTracingScore();
       
       let stars = "";
@@ -667,28 +826,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (score >= 80) {
         stars = "⭐⭐⭐";
-        text = isHindi ? "अति उत्तम! बहुत सुंदर!" : "Excellent! Super neat!";
-        praise = isHindi ? "अति उत्तम!" : "Excellent!";
+        if (lang === "hi") {
+          text = "अति उत्तम! बहुत सुंदर!";
+          praise = "अति उत्तम!";
+        } else if (lang === "te") {
+          text = "చాలా బాగుంది! అద్భుతం!";
+          praise = "అద్భుతం!";
+        } else if (lang === "kn") {
+          text = "ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ! ಅದ್ಭುತ!";
+          praise = "ಅದ್ಭುತ!";
+        } else {
+          text = "Excellent! Super neat!";
+          praise = "Excellent!";
+        }
       } else if (score >= 50) {
         stars = "⭐⭐";
-        text = isHindi ? "बहुत बढ़िया! अच्छा प्रयास!" : "Good Job! Keep it up!";
-        praise = isHindi ? "बहुत बढ़िया!" : "Good job!";
+        if (lang === "hi") {
+          text = "बहुत बढ़िया! अच्छा प्रयास!";
+          praise = "बहुत बढ़िया!";
+        } else if (lang === "te") {
+          text = "మంచి ప్రయత్నం! చాలా బాగుంది!";
+          praise = "చాలా బాగుంది!";
+        } else if (lang === "kn") {
+          text = "ಉತ್ತಮ ಪ್ರಯತ್ನ! ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ!";
+          praise = "ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ!";
+        } else {
+          text = "Good Job! Keep it up!";
+          praise = "Good job!";
+        }
       } else if (score >= 15) {
         stars = "⭐";
-        text = isHindi ? "सुंदर प्रयास! थोड़ा और सुधारें!" : "Nice Try! Keep tracing!";
-        praise = isHindi ? "सुंदर प्रयास!" : "Nice try!";
+        if (lang === "hi") {
+          text = "सुंदर प्रयास! थोड़ा और सुधारें!";
+          praise = "सुंदर प्रयास!";
+        } else if (lang === "te") {
+          text = "మంచి ప్రయత్నం! కొంచెం ప్రయత్నించండి!";
+          praise = "మంచి ప్రయత్నం!";
+        } else if (lang === "kn") {
+          text = "ಉತ್ತಮ ಪ್ರಯತ್ನ! ಇನ್ನಷ್ಟು ಪ್ರಯತ್ನಿಸಿ!";
+          praise = "ಉತ್ತಮ ಪ್ರಯತ್ನ!";
+        } else {
+          text = "Nice Try! Keep tracing!";
+          praise = "Nice try!";
+        }
       } else {
         stars = "✏️";
-        text = isHindi ? "फिर से प्रयास करें! आप कर सकते हैं!" : "Let's practice some more!";
-        praise = isHindi ? "फिर से प्रयास करें!" : "Let's practice!";
+        if (lang === "hi") {
+          text = "फिर से प्रयास करें! आप कर सकते हैं!";
+          praise = "फिर से प्रयास करें!";
+        } else if (lang === "te") {
+          text = "మళ్లీ ప్రయత్నించండి! మీరు చేయగలరు!";
+          praise = "మళ్లీ ప్రయత్నించండి!";
+        } else if (lang === "kn") {
+          text = "ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ! ನೀವು ಮಾಡಬಹುದು!";
+          praise = "ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ!";
+        } else {
+          text = "Let's practice some more!";
+          praise = "Let's practice!";
+        }
       }
 
-      // Show rating overlay
       ratingStars.innerText = stars;
       ratingText.innerText = text;
       ratingOverlay.style.display = "flex";
       
-      // Auto hide after 3 seconds
       setTimeout(() => {
         ratingOverlay.style.display = "none";
       }, 3000);
@@ -696,63 +897,63 @@ document.addEventListener("DOMContentLoaded", () => {
       logEngine(`[TRACING ENGINE] Tracing Score: ${score}% (${praise})`, 'log');
       triggerVocabularyMatch(activeLetter, null, praise);
     } else {
-      // Free write mode: Real AI recognition via API
       logEngine(`[AI ENGINE] Evaluating strokes for free drawing...`, 'log');
-      const candidates = await recognizeHandwriting(strokesData, isHindi);
+      const candidates = await recognizeHandwriting(strokesData, lang);
       
       if (candidates.length === 0) {
         logEngine("AI could not recognize the writing. Try drawing again!", "err");
-        alert("🤔 Hmmm, I couldn't guess that one. Try drawing again!");
+        let failText = "🤔 Hmmm, I couldn't guess that one. Try drawing again!";
+        if (lang === "te") failText = "🤔 ఉమ్, నేను ఊహించలేకపోయాను. మళ్ళీ ప్రయత్నించండి!";
+        else if (lang === "kn") failText = "🤔 ಉಮ್, ನನಗೆ ಊಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ!";
+        else if (lang === "hi") failText = "🤔 हूँ, मैं पहचान नहीं पाया। फिर से प्रयास करें!";
+        alert(failText);
         clearBoard();
         return;
       }
 
-      // Check candidates and find the first matching vocabulary word
       let bestCandidate = null;
       let matchedVocab = null;
 
       for (const cand of candidates) {
-        const cleaned = isHindi ? cand.trim() : cand.toUpperCase().trim();
-        if (isHindi) {
-          if (VOCABULARY_HI[cleaned]) {
-            bestCandidate = cleaned;
-            matchedVocab = VOCABULARY_HI[cleaned];
-            break;
-          }
-          if (VOCABULARY_HI_BLENDS[cleaned]) {
-            bestCandidate = cleaned;
-            matchedVocab = VOCABULARY_HI_BLENDS[cleaned];
-            break;
-          }
+        const cleaned = (lang === "hi" || lang === "te" || lang === "kn") ? cand.trim() : cand.toUpperCase().trim();
+        if (lang === "hi") {
+          if (VOCABULARY_HI[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_HI[cleaned]; break; }
+          if (VOCABULARY_HI_BLENDS[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_HI_BLENDS[cleaned]; break; }
+        } else if (lang === "te") {
+          if (VOCABULARY_TE_SINGLE[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_TE_SINGLE[cleaned]; break; }
+          if (VOCABULARY_TE_BLENDS[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_TE_BLENDS[cleaned]; break; }
+        } else if (lang === "kn") {
+          if (VOCABULARY_KN_SINGLE[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_KN_SINGLE[cleaned]; break; }
+          if (VOCABULARY_KN_BLENDS[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_KN_BLENDS[cleaned]; break; }
         } else {
-          if (VOCABULARY_EN_SINGLE[cleaned]) {
-            bestCandidate = cleaned;
-            matchedVocab = VOCABULARY_EN_SINGLE[cleaned];
-            break;
-          }
-          if (VOCABULARY_EN_BLENDS[cleaned]) {
-            bestCandidate = cleaned;
-            matchedVocab = VOCABULARY_EN_BLENDS[cleaned];
-            break;
-          }
+          if (VOCABULARY_EN_SINGLE[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_EN_SINGLE[cleaned]; break; }
+          if (VOCABULARY_EN_BLENDS[cleaned]) { bestCandidate = cleaned; matchedVocab = VOCABULARY_EN_BLENDS[cleaned]; break; }
         }
       }
 
       if (!matchedVocab) {
         bestCandidate = candidates[0];
-        matchedVocab = getDynamicVocab(bestCandidate, isHindi);
+        matchedVocab = getDynamicVocab(bestCandidate, lang);
       }
 
-      // Show AI Guess overlay
       ratingStars.innerText = "🤖 AI Guess!";
-      ratingText.innerText = isHindi ? `मुझे लगता है आपने लिखा: ${bestCandidate}` : `I guess you wrote: ${bestCandidate}!`;
+      if (lang === "hi") ratingText.innerText = `मुझे लगता है आपने लिखा: ${bestCandidate}`;
+      else if (lang === "te") ratingText.innerText = `మీరు రాసింది అని నేను అనుకుంటున్నాను: ${bestCandidate}`;
+      else if (lang === "kn") ratingText.innerText = `ನೀವು ಬರೆದಿದ್ದೀರಿ ಎಂದು ನಾನು ಭಾವಿಸುತ್ತೇನೆ: ${bestCandidate}`;
+      else ratingText.innerText = `I guess you wrote: ${bestCandidate}!`;
+
       ratingOverlay.style.display = "flex";
       
       setTimeout(() => {
         ratingOverlay.style.display = "none";
       }, 3000);
 
-      const praise = isHindi ? `मुझे लगता है आपने लिखा ${bestCandidate}` : `I think you wrote ${bestCandidate}!`;
+      let praise = "";
+      if (lang === "hi") praise = `मुझे लगता है आपने लिखा ${bestCandidate}`;
+      else if (lang === "te") praise = `మీరు రాసింది ${bestCandidate}`;
+      else if (lang === "kn") praise = `ನೀವು ಬರೆದಿದ್ದು ${bestCandidate}`;
+      else praise = `I think you wrote ${bestCandidate}!`;
+
       logEngine(`AI prediction: '${bestCandidate}' -> '${matchedVocab.word}'`, 'log');
       triggerVocabularyMatch(bestCandidate, matchedVocab, praise);
     }
@@ -760,11 +961,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function triggerVocabularyMatch(letter, customVocab = null, praise = null) {
     let vocabData = customVocab;
-    let isHindi = currentLanguage === "hi";
+    let lang = currentLanguage;
 
     if (!vocabData) {
-      if (isHindi) {
+      if (lang === "hi") {
         vocabData = currentTab === "single" ? VOCABULARY_HI[letter] : VOCABULARY_HI_BLENDS[letter];
+      } else if (lang === "te") {
+        vocabData = currentTab === "single" ? VOCABULARY_TE_SINGLE[letter] : VOCABULARY_TE_BLENDS[letter];
+      } else if (lang === "kn") {
+        vocabData = currentTab === "single" ? VOCABULARY_KN_SINGLE[letter] : VOCABULARY_KN_BLENDS[letter];
       } else {
         vocabData = currentTab === "single" ? VOCABULARY_EN_SINGLE[letter] : VOCABULARY_EN_BLENDS[letter];
       }
@@ -777,21 +982,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     logEngine(`Success! Match: '${letter}' -> Vocabulary: '${vocabData.word}'`, 'log');
 
-    // Update vocabulary display cards
     vocabLetter.innerText = letter;
     vocabWord.innerText = vocabData.word;
     emojiIllustration.innerText = vocabData.emoji;
 
-    // Apply animation burst celebration
+    const vocabMeaningDisplay = document.getElementById("vocabMeaningDisplay");
+    if (vocabMeaningDisplay) {
+      if (vocabData.translit && vocabData.meaning) {
+        vocabMeaningDisplay.innerText = `(${vocabData.translit} - ${vocabData.meaning})`;
+        vocabMeaningDisplay.style.display = "inline-block";
+      } else {
+        vocabMeaningDisplay.style.display = "none";
+      }
+    }
+
     triggerCelebration();
-
-    // Sequenced audio pronunciations
-    speakWordSequenced(letter, vocabData, isHindi, praise);
-
-    // Highlight key buttons in testing selection board
+    speakWordSequenced(letter, vocabData, lang, praise);
     highlightKeyboardKey(letter);
-
-    // Whiteboard drawing is preserved for kids to look at. Clear is done manually or on next letter.
     logEngine("Whiteboard drawing preserved.", "log");
   }
 
@@ -908,16 +1115,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function repeatPronunciation() {
     let vocabData = null;
-    let isHindi = currentLanguage === "hi";
+    let lang = currentLanguage;
 
-    if (isHindi) {
-      vocabData = VOCABULARY_HI[activeLetter];
+    if (lang === "hi") {
+      vocabData = currentTab === "single" ? VOCABULARY_HI[activeLetter] : VOCABULARY_HI_BLENDS[activeLetter];
+    } else if (lang === "te") {
+      vocabData = currentTab === "single" ? VOCABULARY_TE_SINGLE[activeLetter] : VOCABULARY_TE_BLENDS[activeLetter];
+    } else if (lang === "kn") {
+      vocabData = currentTab === "single" ? VOCABULARY_KN_SINGLE[activeLetter] : VOCABULARY_KN_BLENDS[activeLetter];
     } else {
       vocabData = currentTab === "single" ? VOCABULARY_EN_SINGLE[activeLetter] : VOCABULARY_EN_BLENDS[activeLetter];
     }
     
     if (vocabData) {
-      speakWordSequenced(activeLetter, vocabData, isHindi);
+      speakWordSequenced(activeLetter, vocabData, lang);
     }
   }
 
@@ -928,38 +1139,44 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentLanguage === mode) return;
     currentLanguage = mode;
 
+    btnModeEn.classList.toggle("active", mode === "en");
+    btnModeHi.classList.toggle("active", mode === "hi");
+    btnModeTe.classList.toggle("active", mode === "te");
+    btnModeKn.classList.toggle("active", mode === "kn");
+    keyboardTogglesRow.style.display = "flex";
+    
+    boardEnglishSingle.style.display = mode === "en" ? "flex" : "none";
+    boardEnglishBlends.style.display = (mode === "en" && currentTab === "blends") ? "flex" : "none";
+    
+    boardHindiSingle.style.display = mode === "hi" && currentTab === "single" ? "flex" : "none";
+    boardHindiBlends.style.display = mode === "hi" && currentTab === "blends" ? "flex" : "none";
+    
+    boardTeluguSingle.style.display = mode === "te" && currentTab === "single" ? "flex" : "none";
+    boardTeluguBlends.style.display = mode === "te" && currentTab === "blends" ? "flex" : "none";
+    
+    boardKannadaSingle.style.display = mode === "kn" && currentTab === "single" ? "flex" : "none";
+    boardKannadaBlends.style.display = mode === "kn" && currentTab === "blends" ? "flex" : "none";
+
     if (mode === "en") {
-      btnModeEn.classList.add("active");
-      btnModeHi.classList.remove("active");
-      keyboardTogglesRow.style.display = "flex";
-      
-      boardEnglishSingle.style.display = "flex";
-      boardEnglishBlends.style.display = currentTab === "blends" ? "flex" : "none";
-      boardHindiSingle.style.display = "none";
-      boardHindiBlends.style.display = "none";
-      
-      // Update toggle buttons text
       tabEnSingle.innerText = "Single Letters";
       tabEnBlends.innerText = "Multi-Letter Blends";
-      
       activeLetter = currentTab === "single" ? "A" : "CH";
       logEngine("Switched playroom learning mode to English.", "log");
-    } else {
-      btnModeEn.classList.remove("active");
-      btnModeHi.classList.add("active");
-      keyboardTogglesRow.style.display = "flex"; // Keep visible for Hindi blends too!
-      
-      boardEnglishSingle.style.display = "none";
-      boardEnglishBlends.style.display = "none";
-      boardHindiSingle.style.display = currentTab === "single" ? "flex" : "none";
-      boardHindiBlends.style.display = currentTab === "blends" ? "flex" : "none";
-      
-      // Update toggle buttons text for Hindi
+    } else if (mode === "hi") {
       tabEnSingle.innerText = "वर्णमाला (Letters)";
       tabEnBlends.innerText = "संयुक्त व्यंजन (Blends)";
-      
       activeLetter = currentTab === "single" ? "अ" : "क्ष";
       logEngine("Switched playroom learning mode to Hindi Varnamala.", "log");
+    } else if (mode === "te") {
+      tabEnSingle.innerText = "అక్షరాలు (Letters)";
+      tabEnBlends.innerText = "ఒత్తులు (Blends)";
+      activeLetter = currentTab === "single" ? "అ" : "క్క";
+      logEngine("Switched playroom learning mode to Telugu.", "log");
+    } else if (mode === "kn") {
+      tabEnSingle.innerText = "ಅಕ್ಷರಗಳು (Letters)";
+      tabEnBlends.innerText = "ಒತ್ತುಗಳು (Blends)";
+      activeLetter = currentTab === "single" ? "ಅ" : "ಕ್ಕ";
+      logEngine("Switched playroom learning mode to Kannada.", "log");
     }
 
     updateTraceGuideLetter();
@@ -973,6 +1190,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnModeEn.addEventListener("click", () => setLanguageMode("en"));
   btnModeHi.addEventListener("click", () => setLanguageMode("hi"));
+  btnModeTe.addEventListener("click", () => setLanguageMode("te"));
+  btnModeKn.addEventListener("click", () => setLanguageMode("kn"));
 
   // English keyboard toggles (letters vs blends)
   tabEnSingle.addEventListener("click", () => {
@@ -980,19 +1199,20 @@ document.addEventListener("DOMContentLoaded", () => {
     tabEnBlends.classList.remove("active");
     currentTab = "single";
     
-    if (currentLanguage === "en") {
-      boardEnglishSingle.style.display = "flex";
-      boardEnglishBlends.style.display = "none";
-      boardHindiSingle.style.display = "none";
-      boardHindiBlends.style.display = "none";
-      activeLetter = "A";
-    } else {
-      boardEnglishSingle.style.display = "none";
-      boardEnglishBlends.style.display = "none";
-      boardHindiSingle.style.display = "flex";
-      boardHindiBlends.style.display = "none";
-      activeLetter = "अ";
-    }
+    boardEnglishSingle.style.display = currentLanguage === "en" ? "flex" : "none";
+    boardEnglishBlends.style.display = "none";
+    boardHindiSingle.style.display = currentLanguage === "hi" ? "flex" : "none";
+    boardHindiBlends.style.display = "none";
+    boardTeluguSingle.style.display = currentLanguage === "te" ? "flex" : "none";
+    boardTeluguBlends.style.display = "none";
+    boardKannadaSingle.style.display = currentLanguage === "kn" ? "flex" : "none";
+    boardKannadaBlends.style.display = "none";
+    
+    if (currentLanguage === "en") activeLetter = "A";
+    else if (currentLanguage === "hi") activeLetter = "अ";
+    else if (currentLanguage === "te") activeLetter = "అ";
+    else if (currentLanguage === "kn") activeLetter = "ಅ";
+
     updateTraceGuideLetter();
     clearBoard();
     repeatPronunciation();
@@ -1003,19 +1223,20 @@ document.addEventListener("DOMContentLoaded", () => {
     tabEnBlends.classList.add("active");
     currentTab = "blends";
     
-    if (currentLanguage === "en") {
-      boardEnglishSingle.style.display = "none";
-      boardEnglishBlends.style.display = "flex";
-      boardHindiSingle.style.display = "none";
-      boardHindiBlends.style.display = "none";
-      activeLetter = "CH";
-    } else {
-      boardEnglishSingle.style.display = "none";
-      boardEnglishBlends.style.display = "none";
-      boardHindiSingle.style.display = "none";
-      boardHindiBlends.style.display = "flex";
-      activeLetter = "क्ष";
-    }
+    boardEnglishSingle.style.display = "none";
+    boardEnglishBlends.style.display = currentLanguage === "en" ? "flex" : "none";
+    boardHindiSingle.style.display = "none";
+    boardHindiBlends.style.display = currentLanguage === "hi" ? "flex" : "none";
+    boardTeluguSingle.style.display = "none";
+    boardTeluguBlends.style.display = currentLanguage === "te" ? "flex" : "none";
+    boardKannadaSingle.style.display = "none";
+    boardKannadaBlends.style.display = currentLanguage === "kn" ? "flex" : "none";
+    
+    if (currentLanguage === "en") activeLetter = "CH";
+    else if (currentLanguage === "hi") activeLetter = "क्ष";
+    else if (currentLanguage === "te") activeLetter = "క్క";
+    else if (currentLanguage === "kn") activeLetter = "ಕ್ಕ";
+
     updateTraceGuideLetter();
     clearBoard();
     repeatPronunciation();
@@ -1024,8 +1245,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tracing guidelines guide updater
   function updateTraceGuideLetter() {
     traceGuide.innerText = activeLetter;
-    // Set custom fonts or sizes for Hindi since it requires clean rendering space
-    if (currentLanguage === "hi") {
+    if (currentLanguage === "hi" || currentLanguage === "te" || currentLanguage === "kn") {
       traceGuide.style.letterSpacing = "0px";
     } else {
       traceGuide.style.letterSpacing = "-10px";
@@ -1077,6 +1297,50 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => handleKeyboardSelection(char));
       boardHindiBlends.appendChild(btn);
     });
+
+    // E. Telugu Single Letters
+    boardTeluguSingle.innerHTML = "";
+    Object.keys(VOCABULARY_TE_SINGLE).forEach(char => {
+      const btn = document.createElement("button");
+      btn.className = "key-btn";
+      btn.innerText = char;
+      btn.setAttribute("data-key", char);
+      btn.addEventListener("click", () => handleKeyboardSelection(char));
+      boardTeluguSingle.appendChild(btn);
+    });
+
+    // F. Telugu Blends
+    boardTeluguBlends.innerHTML = "";
+    Object.keys(VOCABULARY_TE_BLENDS).forEach(char => {
+      const btn = document.createElement("button");
+      btn.className = "key-btn blend";
+      btn.innerText = char;
+      btn.setAttribute("data-key", char);
+      btn.addEventListener("click", () => handleKeyboardSelection(char));
+      boardTeluguBlends.appendChild(btn);
+    });
+
+    // G. Kannada Single Letters
+    boardKannadaSingle.innerHTML = "";
+    Object.keys(VOCABULARY_KN_SINGLE).forEach(char => {
+      const btn = document.createElement("button");
+      btn.className = "key-btn";
+      btn.innerText = char;
+      btn.setAttribute("data-key", char);
+      btn.addEventListener("click", () => handleKeyboardSelection(char));
+      boardKannadaSingle.appendChild(btn);
+    });
+
+    // H. Kannada Blends
+    boardKannadaBlends.innerHTML = "";
+    Object.keys(VOCABULARY_KN_BLENDS).forEach(char => {
+      const btn = document.createElement("button");
+      btn.className = "key-btn blend";
+      btn.innerText = char;
+      btn.setAttribute("data-key", char);
+      btn.addEventListener("click", () => handleKeyboardSelection(char));
+      boardKannadaBlends.appendChild(btn);
+    });
   }
 
   function handleKeyboardSelection(char) {
@@ -1085,22 +1349,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTraceGuideLetter();
     clearBoard();
     
-    // If in trace mode, simulate success on click. In free mode, let them write or check directly.
     if (currentPlayMode === "trace") {
       hasDrawnAnything = true;
       evaluateDrawing();
     } else {
-      // Just update displays and speak it directly
-      const matched = getDynamicVocab(char, currentLanguage === "hi");
+      const matched = getDynamicVocab(char, currentLanguage);
       triggerVocabularyMatch(char, matched);
     }
   }
 
   function highlightKeyboardKey(char) {
-    // Clear highlights
     document.querySelectorAll(".key-btn").forEach(btn => btn.classList.remove("active"));
-    
-    // Add highlight class to matching buttons
     const activeButtons = document.querySelectorAll(`.key-btn[data-key="${char}"]`);
     activeButtons.forEach(btn => btn.classList.add("active"));
   }
@@ -1110,6 +1369,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let keys = [];
     if (currentLanguage === "hi") {
       keys = currentTab === "single" ? Object.keys(VOCABULARY_HI) : Object.keys(VOCABULARY_HI_BLENDS);
+    } else if (currentLanguage === "te") {
+      keys = currentTab === "single" ? Object.keys(VOCABULARY_TE_SINGLE) : Object.keys(VOCABULARY_TE_BLENDS);
+    } else if (currentLanguage === "kn") {
+      keys = currentTab === "single" ? Object.keys(VOCABULARY_KN_SINGLE) : Object.keys(VOCABULARY_KN_BLENDS);
     } else {
       keys = currentTab === "single" ? Object.keys(VOCABULARY_EN_SINGLE) : Object.keys(VOCABULARY_EN_BLENDS);
     }
@@ -1224,36 +1487,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function evaluatePronunciation(spokenText) {
-    let isHindi = currentLanguage === "hi";
-    let targetWord = "";
     let vocabData = null;
-    
-    if (isHindi) {
+    let lang = currentLanguage;
+    if (lang === "hi") {
       vocabData = currentTab === "single" ? VOCABULARY_HI[activeLetter] : VOCABULARY_HI_BLENDS[activeLetter];
+    } else if (lang === "te") {
+      vocabData = currentTab === "single" ? VOCABULARY_TE_SINGLE[activeLetter] : VOCABULARY_TE_BLENDS[activeLetter];
+    } else if (lang === "kn") {
+      vocabData = currentTab === "single" ? VOCABULARY_KN_SINGLE[activeLetter] : VOCABULARY_KN_BLENDS[activeLetter];
     } else {
       vocabData = currentTab === "single" ? VOCABULARY_EN_SINGLE[activeLetter] : VOCABULARY_EN_BLENDS[activeLetter];
     }
     
     if (!vocabData) return;
-    targetWord = vocabData.word;
+    let targetWord = vocabData.word;
     
     const spokenClean = spokenText.toLowerCase().trim();
     const targetClean = targetWord.toLowerCase().trim();
     
-    // Forgiving check for kids: match if spoken contains target or vice versa
     const isMatch = spokenClean.includes(targetClean) || targetClean.includes(spokenClean);
     
-    // Cancel any active TTS
     window.speechSynthesis.cancel();
     const seqId = ++activeSequenceId;
     
-    const speakFeedback = (phrase) => {
+    const speakFeedback = (phrase, feedbackLang = "en") => {
       return new Promise((resolve) => {
         const utterance = new SpeechSynthesisUtterance(phrase);
-        const activeVoice = getSpeechVoice(isHindi);
+        const activeVoice = getSpeechVoice(feedbackLang);
         if (activeVoice) utterance.voice = activeVoice;
         utterance.pitch = 1.0;
-        utterance.rate = isHindi ? 0.88 : 0.95;
+        utterance.rate = feedbackLang === "en" ? 0.95 : 0.88;
         utterance.onend = () => resolve();
         utterance.onerror = () => resolve();
         window.speechSynthesis.speak(utterance);
@@ -1263,17 +1526,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isMatch) {
       logEngine(`Pronunciation MATCH: "${spokenText}" matches target "${targetWord}"!`, "tts");
       triggerCelebration();
-      if (isHindi) {
-        await speakFeedback(`अरे वाह! बहुत सुंदर उच्चारण! आपने कहा ${targetWord}`);
+      if (lang === "hi") {
+        await speakFeedback(`अरे वाह! बहुत सुंदर उच्चारण! आपने कहा ${targetWord}`, "hi");
+      } else if (lang === "te") {
+        await speakFeedback(`భలే చెప్పారు! చాలా మంచి ఉచ్ఛారణ! మీరు ${targetWord} అన్నారు`, "te");
+      } else if (lang === "kn") {
+        await speakFeedback(`ಭಲೇ ಹೇಳಿದ್ರಿ! ತುಂಬಾ ಒಳ್ಳೆಯ ಉಚ್ಚಾರಣೆ! ನೀವು ${targetWord} ಅಂದ್ರಿ`, "kn");
       } else {
-        await speakFeedback(`Awesome! Perfect pronunciation! You said ${targetWord}`);
+        await speakFeedback(`Awesome! Perfect pronunciation! You said ${targetWord}`, "en");
       }
     } else {
       logEngine(`Pronunciation MISMATCH: "${spokenText}" did not match target "${targetWord}".`, "tts");
-      if (isHindi) {
-        await speakFeedback(`सुंदर प्रयास! एक बार फिर से बोलिए: ${targetWord}`);
+      if (lang === "hi") {
+        await speakFeedback(`सुंदर प्रयास! एक बार फिर से बोलिए: ${targetWord}`, "hi");
+      } else if (lang === "te") {
+        await speakFeedback(`మంచి ప్రయత్నం! ఇంకోసారి చెప్పండి: ${targetWord}`, "te");
+      } else if (lang === "kn") {
+        await speakFeedback(`ಉತ್ತಮ ಪ್ರಯತ್ನ! ಮತ್ತೊಮ್ಮೆ ಹೇಳಿ: ${targetWord}`, "kn");
       } else {
-        await speakFeedback(`Nice try! Let's say it again: ${targetWord}`);
+        await speakFeedback(`Nice try! Let's say it again: ${targetWord}`, "en");
       }
     }
   }
@@ -1288,32 +1559,47 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     
-    let isHindi = currentLanguage === "hi";
     let vocabData = null;
-    
-    if (isHindi) {
+    let lang = currentLanguage;
+    if (lang === "hi") {
       vocabData = currentTab === "single" ? VOCABULARY_HI[activeLetter] : VOCABULARY_HI_BLENDS[activeLetter];
+    } else if (lang === "te") {
+      vocabData = currentTab === "single" ? VOCABULARY_TE_SINGLE[activeLetter] : VOCABULARY_TE_BLENDS[activeLetter];
+    } else if (lang === "kn") {
+      vocabData = currentTab === "single" ? VOCABULARY_KN_SINGLE[activeLetter] : VOCABULARY_KN_BLENDS[activeLetter];
     } else {
       vocabData = currentTab === "single" ? VOCABULARY_EN_SINGLE[activeLetter] : VOCABULARY_EN_BLENDS[activeLetter];
     }
     if (!vocabData) return;
     
-    // Pronounce instruction prompt: "Now say: [word]!"
     window.speechSynthesis.cancel();
     const seqId = ++activeSequenceId;
     
-    const promptPhrase = isHindi ? `अब आप बोलिए: ${vocabData.word}` : `Now your turn! Say: ${vocabData.word}`;
+    let promptPhrase = "";
+    if (lang === "hi") {
+      promptPhrase = `अब आप बोलिए: ${vocabData.word}`;
+    } else if (lang === "te") {
+      promptPhrase = `ఇప్పుడు మీ వంతు! చెప్పండి: ${vocabData.word}`;
+    } else if (lang === "kn") {
+      promptPhrase = `ಈಗ ನಿಮ್ಮ ಸರತಿ! ಹೇಳಿ: ${vocabData.word}`;
+    } else {
+      promptPhrase = `Now your turn! Say: ${vocabData.word}`;
+    }
+    
     const utterance = new SpeechSynthesisUtterance(promptPhrase);
-    const activeVoice = getSpeechVoice(isHindi);
+    const activeVoice = getSpeechVoice(lang);
     if (activeVoice) utterance.voice = activeVoice;
     utterance.pitch = 1.0;
-    utterance.rate = isHindi ? 0.88 : 0.95;
+    utterance.rate = lang === "en" ? 0.95 : 0.88;
     
     utterance.onend = () => {
-      // Start recording once speech ends
       if (seqId === activeSequenceId) {
         try {
-          recognition.lang = isHindi ? "hi-IN" : "en-IN";
+          let langCode = "en-US";
+          if (lang === "hi") langCode = "hi-IN";
+          else if (lang === "te") langCode = "te-IN";
+          else if (lang === "kn") langCode = "kn-IN";
+          recognition.lang = langCode;
           recognition.start();
         } catch(e) {
           logEngine(`Error starting recognition: ${e.message}`, 'err');
@@ -1414,7 +1700,58 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "पहिए", count: "तीन", options: ["तीन", "चार", "दो"], sentence: "ऑटो रिक्शा में ___ पहिए होते हैं।" }
   ];
 
-  function generateQuizQuestion(isHindi) {
+  const QUIZ_TE_ANIMALS = [
+    { name: "పిల్లి", sound: "మ్యావ్", emoji: "🐱" },
+    { name: "కుక్క", sound: "భౌ-భౌ", emoji: "🐶" },
+    { name: "ఆవు", sound: "అంబా", emoji: "🐮" },
+    { name: "కప్ప", sound: "బెకబెక", emoji: "🐸" },
+    { name: "సింహం", sound: "గర్జన", emoji: "🦁" }
+  ];
+
+  const QUIZ_TE_COLORS = [
+    { name: "టమాటా", color: "ఎరుపు", emoji: "🍅" },
+    { name: "ఆకు", color: "ఆకుపచ్చ", emoji: "🍃" },
+    { name: "పాలు", color: "తెలుపు", emoji: "🥛" },
+    { name: "అరటిపండు", color: "పసుపు", emoji: "🍌" }
+  ];
+
+  const QUIZ_TE_VERBS = [
+    { sentence: "nuvvu ekkadiki ___?", ans: "వెళ్తున్నావు", options: ["వెళ్తున్నావు", "వెళ్తున్నాను", "వెళ్తున్నారు"] },
+    { sentence: "నేను బడికి ___.", ans: "వెళ్తున్నాను", options: ["వెళ్తున్నాను", "వెళ్తున్నావు", "వెళ్తున్నారు"] },
+    { sentence: "వారు ఆడుకు ___.", ans: "ంటున్నారు", options: ["ంటున్నారు", "ంటున్నాను", "ంటున్నావు"] }
+  ];
+
+  const QUIZ_TE_COUNTS = [
+    { name: "కళ్ళు", count: "రెండు", options: ["రెండు", "మూడు", "నాలుగు"], sentence: "నాకు ___ కళ్ళు ఉన్నాయి." },
+    { name: "కాళ్ళు", count: "నాలుగు", options: ["నాలుగు", "రెండు", "ఆరు"], sentence: "ఆవుకు ___ కాళ్ళు ఉన్నాయి." }
+  ];
+
+  const QUIZ_KN_ANIMALS = [
+    { name: "ಬೆಕ್ಕು", sound: "ಮಿಯಾವ್", emoji: "🐱" },
+    { name: "ನಾಯಿ", sound: "ಬೌ-ಬೌ", emoji: "🐶" },
+    { name: "ಹಸು", sound: "ಅಂಬಾ", emoji: "🐮" },
+    { name: "ಕಪ್ಪೆ", sound: "ಬೆಕ-ಬೆಕ", emoji: "🐸" },
+    { name: "ಸಿಂಹ", sound: "ಗರ್ಜನೆ", emoji: "🦁" }
+  ];
+
+  const QUIZ_KN_COLORS = [
+    { name: "ಟೊಮೇಟೊ", color: "ಕೆಂಪು", emoji: "🍅" },
+    { name: "ಎಲೆ", color: "ಹಸಿರು", emoji: "🍃" },
+    { name: "ಹಾಲು", color: "ಬಿಳಿ", emoji: "🥛" },
+    { name: "ಬಾಳೆಹಣ್ಣು", color: "ಹಳದಿ", emoji: "🍌" }
+  ];
+
+  const QUIZ_KN_VERBS = [
+    { sentence: "ನೀನು ಎಲ್ಲಿಗೆ ___?", ans: "ಹೋಗುತ್ತಿದ್ದೀಯಾ", options: ["ಹೋಗುತ್ತಿದ್ದೀಯಾ", "ಹೋಗುತ್ತಿದ್ದೇನೆ", "ಹೋಗುತ್ತಿದ್ದಾರೆ"] },
+    { sentence: "ನಾನು ಶಾಲೆಗೆ ___.", ans: "ಹೋಗುತ್ತಿದ್ದೇನೆ", options: ["ಹೋಗುತ್ತಿದ್ದೇನೆ", "ಹೋಗುತ್ತಿದ್ದೀಯಾ", "ಹೋಗುತ್ತಿದ್ದಾರೆ"] }
+  ];
+
+  const QUIZ_KN_COUNTS = [
+    { name: "ಕಣ್ಣುಗಳು", count: "ಎರಡು", options: ["ಎರಡು", "ಮೂರು", "ನಾಲ್ಕು"], sentence: "ನನಗೆ ___ ಕಣ್ಣುಗಳಿವೆ." },
+    { name: "ಕಾಲುಗಳು", count: "ನಾಲ್ಕು", options: ["ನಾಲ್ಕು", "ಎರಡು", "ಆರು"], sentence: "ಹಸುವಿಗೆ ___ ಕಾಲುಗಳಿವೆ." }
+  ];
+
+  function generateQuizQuestion(lang) {
     const categories = ["animals", "colors", "verbs", "special"];
     const chosenCategory = categories[Math.floor(Math.random() * categories.length)];
     
@@ -1423,7 +1760,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let answer = "";
     let completed = "";
     
-    if (isHindi) {
+    if (lang === "hi") {
       if (chosenCategory === "animals") {
         const item = QUIZ_HI_ANIMALS[Math.floor(Math.random() * QUIZ_HI_ANIMALS.length)];
         const correct = item.sound;
@@ -1432,7 +1769,6 @@ document.addEventListener("DOMContentLoaded", () => {
           sentence = `${item.emoji} ${item.name} ___ है।`;
         }
         answer = correct;
-        
         const others = QUIZ_HI_ANIMALS.filter(x => x.sound !== correct).map(x => x.sound);
         const wrong1 = others[Math.floor(Math.random() * others.length)];
         const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)];
@@ -1447,7 +1783,6 @@ document.addEventListener("DOMContentLoaded", () => {
           sentence = `${item.emoji} ${item.name} का रंग ___ है।`;
         }
         answer = correct;
-        
         const others = ["लाल", "हरा", "नीला", "पीला", "सफेद", "काला", "नारंगी", "गुलाबी"].filter(x => x !== correct);
         const wrong1 = others[Math.floor(Math.random() * others.length)];
         const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)];
@@ -1468,13 +1803,86 @@ document.addEventListener("DOMContentLoaded", () => {
         options = [...item.options];
         completed = sentence.replace("___", answer);
       }
+    } else if (lang === "te") {
+      if (chosenCategory === "animals") {
+        const item = QUIZ_TE_ANIMALS[Math.floor(Math.random() * QUIZ_TE_ANIMALS.length)];
+        const correct = item.sound;
+        sentence = `${item.emoji} ${item.name} ___ అంటుంది.`;
+        answer = correct;
+        const others = QUIZ_TE_ANIMALS.filter(x => x.sound !== correct).map(x => x.sound);
+        const wrong1 = others[Math.floor(Math.random() * others.length)] || "భౌ-భౌ";
+        const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)] || "మ్యావ్";
+        options = [correct, wrong1, wrong2];
+        completed = sentence.replace("___", correct);
+      } 
+      else if (chosenCategory === "colors") {
+        const item = QUIZ_TE_COLORS[Math.floor(Math.random() * QUIZ_TE_COLORS.length)];
+        const correct = item.color;
+        sentence = `${item.emoji} ${item.name} ___ రంగులో ఉంటుంది.`;
+        answer = correct;
+        const others = ["ఎరుపు", "ఆకుపచ్చ", "తెలుపు", "పసుపు", "నలుపు", "నీలం"].filter(x => x !== correct);
+        const wrong1 = others[Math.floor(Math.random() * others.length)];
+        const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)];
+        options = [correct, wrong1, wrong2];
+        completed = sentence.replace("___", correct);
+      }
+      else if (chosenCategory === "verbs") {
+        const item = QUIZ_TE_VERBS[Math.floor(Math.random() * QUIZ_TE_VERBS.length)];
+        sentence = item.sentence;
+        answer = item.ans;
+        options = [...item.options];
+        completed = sentence.replace("___", answer);
+      }
+      else {
+        const item = QUIZ_TE_COUNTS[Math.floor(Math.random() * QUIZ_TE_COUNTS.length)];
+        sentence = item.sentence;
+        answer = item.count;
+        options = [...item.options];
+        completed = sentence.replace("___", answer);
+      }
+    } else if (lang === "kn") {
+      if (chosenCategory === "animals") {
+        const item = QUIZ_KN_ANIMALS[Math.floor(Math.random() * QUIZ_KN_ANIMALS.length)];
+        const correct = item.sound;
+        sentence = `${item.emoji} ${item.name} ___ ಎನ್ನುತ್ತದೆ.`;
+        answer = correct;
+        const others = QUIZ_KN_ANIMALS.filter(x => x.sound !== correct).map(x => x.sound);
+        const wrong1 = others[Math.floor(Math.random() * others.length)] || "ಬೌ-ಬೌ";
+        const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)] || "ಮಿಯಾವ್";
+        options = [correct, wrong1, wrong2];
+        completed = sentence.replace("___", correct);
+      } 
+      else if (chosenCategory === "colors") {
+        const item = QUIZ_KN_COLORS[Math.floor(Math.random() * QUIZ_KN_COLORS.length)];
+        const correct = item.color;
+        sentence = `${item.emoji} ${item.name} ___ ಬಣ್ಣದ್ದಾಗಿದೆ.`;
+        answer = correct;
+        const others = ["ಕೆಂಪು", "ಹಸಿರು", "ಬಿಳಿ", "ಹಳದಿ", "ಕಪ್ಪು", "ನೀಲಿ"].filter(x => x !== correct);
+        const wrong1 = others[Math.floor(Math.random() * others.length)];
+        const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)];
+        options = [correct, wrong1, wrong2];
+        completed = sentence.replace("___", correct);
+      }
+      else if (chosenCategory === "verbs") {
+        const item = QUIZ_KN_VERBS[Math.floor(Math.random() * QUIZ_KN_VERBS.length)];
+        sentence = item.sentence;
+        answer = item.ans;
+        options = [...item.options];
+        completed = sentence.replace("___", answer);
+      }
+      else {
+        const item = QUIZ_KN_COUNTS[Math.floor(Math.random() * QUIZ_KN_COUNTS.length)];
+        sentence = item.sentence;
+        answer = item.count;
+        options = [...item.options];
+        completed = sentence.replace("___", answer);
+      }
     } else {
       if (chosenCategory === "animals") {
         const item = QUIZ_EN_ANIMALS[Math.floor(Math.random() * QUIZ_EN_ANIMALS.length)];
         const correct = item.sound;
         sentence = `A ${item.name} ${item.emoji} says ___ `;
         answer = correct;
-        
         const others = QUIZ_EN_ANIMALS.filter(x => x.sound !== correct).map(x => x.sound);
         const wrong1 = others[Math.floor(Math.random() * others.length)];
         const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)];
@@ -1486,7 +1894,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const correct = item.color;
         sentence = `The ${item.name} ${item.emoji} is ___ `;
         answer = correct;
-        
         const others = ["blue", "green", "yellow", "red", "white", "orange", "purple", "pink"].filter(x => x !== correct);
         const wrong1 = others[Math.floor(Math.random() * others.length)];
         const wrong2 = others.filter(x => x !== wrong1)[Math.floor(Math.random() * others.filter(x => x !== wrong1).length)];
@@ -1520,14 +1927,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function loadNextQuizQuestion(resetScore = false) {
+    let lang = currentLanguage;
     if (resetScore) {
       quizScoreValue = 0;
-      let isHindi = currentLanguage === "hi";
-      quizScore.innerText = isHindi ? `अंक: 0` : `Score: 0`;
+      quizScore.innerText = (lang === "hi" ? `अंक: 0` : (lang === "te" ? `మార్కులు: 0` : (lang === "kn" ? `ಅಂಕಗಳು: 0` : `Score: 0`)));
     }
     
-    let isHindi = currentLanguage === "hi";
-    const q = generateQuizQuestion(isHindi);
+    const q = generateQuizQuestion(lang);
     renderQuizQuestion(q);
   }
 
@@ -1559,29 +1965,33 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isSoundEnabled) return;
     window.speechSynthesis.cancel();
     
-    let isHindi = currentLanguage === "hi";
+    let lang = currentLanguage;
     let textToSpeak = "";
     
     // Strip emojis before speech synthesis
     let cleanedSentence = currentQuizSentenceTemplate.replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDC00-\uDFFF]/g, '');
     
-    if (isHindi) {
+    if (lang === "hi") {
       textToSpeak = "खाली स्थान भरें: " + cleanedSentence.replace("___", "खाली स्थान");
+    } else if (lang === "te") {
+      textToSpeak = "ఖాళీ స్థలాన్ని పూరించండి: " + cleanedSentence.replace("___", "ఖాళీ స్థలం");
+    } else if (lang === "kn") {
+      textToSpeak = "ಖಾಲಿ ಜಾಗವನ್ನು ತುಂಬಿ: " + cleanedSentence.replace("___", "ಖಾಲಿ ಜಾಗ");
     } else {
       textToSpeak = "Fill in the blank: " + cleanedSentence.replace("___", "blank");
     }
     
     const utterance = new SpeechSynthesisUtterance(textToSpeak);
-    const activeVoice = getSpeechVoice(isHindi);
+    const activeVoice = getSpeechVoice(lang);
     if (activeVoice) utterance.voice = activeVoice;
     utterance.volume = 1.0;
     utterance.pitch = 1.0;
-    utterance.rate = isHindi ? 0.88 : 0.95;
+    utterance.rate = lang === "en" ? 0.95 : 0.88;
     window.speechSynthesis.speak(utterance);
   }
 
   async function handleQuizOptionClick(selectedOption, clickedBtn) {
-    let isHindi = currentLanguage === "hi";
+    let lang = currentLanguage;
     
     if (selectedOption === currentQuizAnswer) {
       logEngine(`Quiz answer selected: '${selectedOption}' is CORRECT!`, 'log');
@@ -1600,14 +2010,18 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       
       quizScoreValue++;
-      quizScore.innerText = isHindi ? `अंक: ${quizScoreValue}` : `Score: ${quizScoreValue}`;
+      quizScore.innerText = (lang === "hi" ? `अंक: ${quizScoreValue}` : (lang === "te" ? `మార్కులు: ${quizScoreValue}` : (lang === "kn" ? `ಅಂಕಗಳು: ${quizScoreValue}` : `Score: ${quizScoreValue}`)));
       
       const praisesHi = ["बहुत सुंदर!", "शाबाश!", "बिल्कुल सही!", "अति उत्तम!"];
       const praisesEn = ["Super!", "Great Job!", "Correct!", "Fantastic!"];
+      const praisesTe = ["చాలా బాగుంది!", "శభాష్!", "ఖచ్చితంగా సరైనది!", "అద్భుతం!"];
+      const praisesKn = ["ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ!", "ಶಭಾಷ್!", "ಖಂಡಿತ ಸರಿಯಾಗಿದೆ!", "ಅದ್ಭುತ!"];
       
-      const randomPraise = isHindi 
-        ? praisesHi[Math.floor(Math.random() * praisesHi.length)] 
-        : praisesEn[Math.floor(Math.random() * praisesEn.length)];
+      let randomPraise = "";
+      if (lang === "hi") randomPraise = praisesHi[Math.floor(Math.random() * praisesHi.length)];
+      else if (lang === "te") randomPraise = praisesTe[Math.floor(Math.random() * praisesTe.length)];
+      else if (lang === "kn") randomPraise = praisesKn[Math.floor(Math.random() * praisesKn.length)];
+      else randomPraise = praisesEn[Math.floor(Math.random() * praisesEn.length)];
       
       quizFeedbackEmoji.innerText = "🎉";
       quizFeedbackText.innerText = randomPraise;
@@ -1617,16 +2031,16 @@ document.addEventListener("DOMContentLoaded", () => {
       
       window.speechSynthesis.cancel();
       let cleanCompleted = currentQuizCompletedSentence.replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDC00-\uDFFF]/g, '');
-      const praisePhrase = isHindi 
+      const praisePhrase = (lang === "hi" || lang === "te" || lang === "kn")
         ? `${randomPraise} ${cleanCompleted}` 
         : `${randomPraise}! ${cleanCompleted}`;
       
       const utterance = new SpeechSynthesisUtterance(praisePhrase);
-      const activeVoice = getSpeechVoice(isHindi);
+      const activeVoice = getSpeechVoice(lang);
       if (activeVoice) utterance.voice = activeVoice;
       utterance.volume = 1.0;
       utterance.pitch = 1.0;
-      utterance.rate = isHindi ? 0.88 : 0.95;
+      utterance.rate = lang === "en" ? 0.95 : 0.88;
       window.speechSynthesis.speak(utterance);
       
       btnQuizNext.style.display = "inline-block";
@@ -1635,16 +2049,18 @@ document.addEventListener("DOMContentLoaded", () => {
       clickedBtn.classList.add("wrong");
       
       window.speechSynthesis.cancel();
-      const feedbackPhrase = isHindi 
-        ? "सुंदर प्रयास! कोई और उत्तर चुनिए।" 
-        : "Nice try! Let's choose another word!";
+      let feedbackPhrase = "";
+      if (lang === "hi") feedbackPhrase = "सुंदर प्रयास! कोई और उत्तर चुनिए।";
+      else if (lang === "te") feedbackPhrase = "మంచి ప్రయత్నం! మరొక పదాన్ని ఎంచుకోండి!";
+      else if (lang === "kn") feedbackPhrase = "ಉತ್ತಮ ಪ್ರಯತ್ನ! ಮತ್ತೊಂದು ಪದವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ!";
+      else feedbackPhrase = "Nice try! Let's choose another word!";
       
       const utterance = new SpeechSynthesisUtterance(feedbackPhrase);
-      const activeVoice = getSpeechVoice(isHindi);
+      const activeVoice = getSpeechVoice(lang);
       if (activeVoice) utterance.voice = activeVoice;
       utterance.volume = 1.0;
       utterance.pitch = 1.0;
-      utterance.rate = isHindi ? 0.88 : 0.95;
+      utterance.rate = lang === "en" ? 0.95 : 0.88;
       window.speechSynthesis.speak(utterance);
     }
   }
@@ -1653,14 +2069,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnQuizNext.style.display === "inline-block") {
       if (!isSoundEnabled) return;
       window.speechSynthesis.cancel();
-      let isHindi = currentLanguage === "hi";
+      let lang = currentLanguage;
       let cleanCompleted = currentQuizCompletedSentence.replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDC00-\uDFFF]/g, '');
       const utterance = new SpeechSynthesisUtterance(cleanCompleted);
-      const activeVoice = getSpeechVoice(isHindi);
+      const activeVoice = getSpeechVoice(lang);
       if (activeVoice) utterance.voice = activeVoice;
       utterance.volume = 1.0;
       utterance.pitch = 1.0;
-      utterance.rate = isHindi ? 0.88 : 0.95;
+      utterance.rate = lang === "en" ? 0.95 : 0.88;
       window.speechSynthesis.speak(utterance);
     } else {
       speakQuizPrompt();

@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Vaishnavi's Playroom - Tracing & Vocabulary</title>
+  <!-- PWA Manifest & Mobile Capability Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Playroom">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <meta name="theme-color" content="#3b82f6">
   <!-- Playful Comic Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +30,19 @@
       </div>
       
       <div class="header-controls">
-        <!-- English vs Hindi Toggle -->
+        <!-- Language Selectors Toggle -->
         <div class="mode-toggle-container">
           <button class="mode-btn active" id="btnModeEn" data-mode="en">
             <span class="btn-flag">🇬🇧</span> English
           </button>
           <button class="mode-btn" id="btnModeHi" data-mode="hi">
             <span class="btn-flag">🇮🇳</span> Hindi
+          </button>
+          <button class="mode-btn" id="btnModeTe" data-mode="te">
+            <span class="btn-flag">🇮🇳</span> తెలుగు
+          </button>
+          <button class="mode-btn" id="btnModeKn" data-mode="kn">
+            <span class="btn-flag">🇮🇳</span> ಕನ್ನಡ
           </button>
         </div>
 
@@ -159,6 +172,8 @@
           <div class="vocab-letter" id="vocabLetterDisplay">A</div>
           <!-- Simple matching word -->
           <div class="vocab-word" id="vocabWordDisplay">Apple</div>
+          <!-- Meaning sub-label for transliterations & translations -->
+          <div class="vocab-meaning" id="vocabMeaningDisplay" style="display: none;">(Amma - Mother)</div>
           
           <!-- Dynamic graphical illustration card -->
           <div class="illustration-container" id="illustrationContainer">
@@ -201,6 +216,26 @@
         <!-- Rendered dynamically in app.js (क्ष, त्र, ज्ञ...) -->
       </div>
 
+      <!-- Telugu Single Alphabet Board -->
+      <div class="keyboard-board" id="boardTeluguSingle" style="display: none;">
+        <!-- Rendered dynamically in app.js -->
+      </div>
+      
+      <!-- Telugu Blends Board -->
+      <div class="keyboard-board" id="boardTeluguBlends" style="display: none;">
+        <!-- Rendered dynamically in app.js -->
+      </div>
+
+      <!-- Kannada Single Alphabet Board -->
+      <div class="keyboard-board" id="boardKannadaSingle" style="display: none;">
+        <!-- Rendered dynamically in app.js -->
+      </div>
+      
+      <!-- Kannada Blends Board -->
+      <div class="keyboard-board" id="boardKannadaBlends" style="display: none;">
+        <!-- Rendered dynamically in app.js -->
+      </div>
+
       <!-- Keyboard section toggles for testing -->
       <div class="keyboard-toggles" id="keyboardTogglesRow">
         <button class="keyboard-tab-btn active" id="tabEnSingle">Single Letters</button>
@@ -220,6 +255,17 @@
     </footer>
 
   </div>
+
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => console.log('[PWA] Service Worker registered successfully with scope:', reg.scope))
+          .catch((err) => console.error('[PWA] Service Worker registration failed:', err));
+      });
+    }
+  </script>
 
 </body>
 </html>
