@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Vaishnavi's Playroom - Tracing & Vocabulary</title>
+  <!-- Playful Comic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- HEADER PANEL -->
+    <header class="app-header">
+      <div class="logo-group">
+        <span class="logo-emoji">🎨</span>
+        <h1>Vaishnavi's Playroom</h1>
+      </div>
+      
+      <div class="header-controls">
+        <!-- English vs Hindi Toggle -->
+        <div class="mode-toggle-container">
+          <button class="mode-btn active" id="btnModeEn" data-mode="en">
+            <span class="btn-flag">🇬🇧</span> English
+          </button>
+          <button class="mode-btn" id="btnModeHi" data-mode="hi">
+            <span class="btn-flag">🇮🇳</span> Hindi
+          </button>
+        </div>
+
+        <!-- TTS Voice Settings Helper -->
+        <button class="sound-toggle-btn" id="btnToggleSound" title="Mute/Unmute Speech">
+          <span id="soundIcon">🔊</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- PLAY MODE BAR -->
+    <div class="mode-bar">
+      <div class="play-mode-toggle">
+        <button class="play-mode-btn active" id="btnPlayTrace">✍️ Trace Guide</button>
+        <button class="play-mode-btn" id="btnPlayFree">🧠 Free Write (AI Guess)</button>
+        <button class="play-mode-btn" id="btnPlayQuiz">❓ Fill the Blank</button>
+      </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE GRID -->
+    <main class="main-grid">
+      
+      <!-- LEFT BOARD: CANVAS FOR WRITING -->
+      <section class="card board-card">
+        <div class="card-header">
+          <h2>Draw & Trace Here!</h2>
+          <span class="bubble-tip" id="lblBoardTip">Trace the letter below</span>
+        </div>
+        
+        <!-- Whiteboard wrapper -->
+        <div class="canvas-wrapper">
+          <!-- Trace guide background -->
+          <div class="trace-guide" id="traceGuideText">A</div>
+          <!-- Canvas drawing canvas -->
+          <canvas id="paintCanvas"></canvas>
+          <!-- Tracing rating overlay -->
+          <div class="rating-overlay" id="ratingOverlay" style="display: none;">
+            <div class="rating-content">
+              <div class="rating-stars" id="ratingStars">⭐⭐⭐</div>
+              <div class="rating-text" id="ratingText">Excellent!</div>
+            </div>
+          </div>
+          <!-- Quiz overlay card -->
+          <div class="quiz-overlay" id="quizOverlay" style="display: none;">
+            <div class="quiz-container">
+              <div class="quiz-card-header">
+                <span class="quiz-score-badge" id="quizScore">Score: 0</span>
+                <span class="quiz-timer" id="quizTimer">⏱️ Fun Quiz</span>
+              </div>
+              <div class="quiz-question-box">
+                <div class="quiz-sentence" id="quizSentence">
+                  Where <span class="quiz-blank-box" id="quizBlankBox">?</span> you going?
+                </div>
+              </div>
+              <div class="quiz-options-grid" id="quizOptionsGrid"></div>
+              <div class="quiz-feedback-box" id="quizFeedbackBox" style="visibility: hidden;">
+                <span class="quiz-feedback-emoji" id="quizFeedbackEmoji">🎉</span>
+                <span class="quiz-feedback-text" id="quizFeedbackText">Super! You did it!</span>
+              </div>
+              <div class="quiz-footer-actions">
+                <button class="btn btn-quiz-speak" id="btnQuizSpeak" title="Hear the sentence again">🔊 Read Sentence</button>
+                <button class="btn btn-quiz-next" id="btnQuizNext" style="display: none;">Next Question ➡️</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canvas controls toolbar -->
+        <div class="canvas-toolbar">
+          <div class="toolbar-section">
+            <span class="toolbar-label">Brush Colors</span>
+            <div class="color-palette">
+              <button class="color-dot active" style="background-color: #3b82f6;" data-color="#3b82f6" title="Blue"></button>
+              <button class="color-dot" style="background-color: #ef4444;" data-color="#ef4444" title="Red"></button>
+              <button class="color-dot" style="background-color: #10b981;" data-color="#10b981" title="Green"></button>
+              <button class="color-dot" style="background-color: #f59e0b;" data-color="#f59e0b" title="Yellow"></button>
+              <button class="color-dot" style="background-color: #a855f7;" data-color="#a855f7" title="Purple"></button>
+            </div>
+          </div>
+
+          <div class="toolbar-section">
+            <span class="toolbar-label">Brush Size</span>
+            <div class="size-selectors">
+              <button class="size-btn" data-size="8" title="Thin Brush">
+                <span class="dot" style="width: 6px; height: 6px;"></span>
+              </button>
+              <button class="size-btn active" data-size="16" title="Medium Brush">
+                <span class="dot" style="width: 12px; height: 12px;"></span>
+              </button>
+              <button class="size-btn" data-size="28" title="Thick Brush">
+                <span class="dot" style="width: 20px; height: 20px;"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="toolbar-actions">
+            <button class="btn btn-clear" id="btnClearCanvas">
+              🗑️ Clear
+            </button>
+            <button class="btn btn-done" id="btnDoneWriting">
+              ✨ Done!
+            </button>
+            <button class="btn btn-next" id="btnNextLetter">
+              ➡️ Next
+            </button>
+          </div>
+        </div>
+
+        <div class="auto-recognize-status">
+          <label class="switch-container">
+            <input type="checkbox" id="chkAutoRecognize" checked>
+            <span class="slider"></span>
+            <span class="switch-label">Auto-check spelling after drawing</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- RIGHT BOARD: VISUAL & VOCABULARY CARD -->
+      <section class="card vocab-card" id="vocabCardDisplay">
+        <div class="card-header">
+          <h2>Your Word!</h2>
+          <button class="audio-repeat-btn" id="btnRepeatAudio" title="Repeat pronunciation">🔊 Play Sound</button>
+        </div>
+        
+        <div class="vocab-content">
+          <!-- Massive letter readout -->
+          <div class="vocab-letter" id="vocabLetterDisplay">A</div>
+          <!-- Simple matching word -->
+          <div class="vocab-word" id="vocabWordDisplay">Apple</div>
+          
+          <!-- Dynamic graphical illustration card -->
+          <div class="illustration-container" id="illustrationContainer">
+            <!-- Rendered dynamically as SVG shapes or emojis inside app.js -->
+            <div class="emoji-illustration" id="emojiIllustration">🍎</div>
+          </div>
+
+          <!-- Microphone speech repeating button -->
+          <button class="mic-btn" id="btnMicSpeak" title="Say the word out loud!">
+            <span class="mic-icon">🎤</span> Tap & Say!
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- TESTING INTERACTIVE VIRTUAL KEYBOARD PANEL -->
+    <section class="card keyboard-card">
+      <div class="card-header">
+        <h2>Practice & Selection Board (Click a letter/blend to test instantly)</h2>
+      </div>
+      
+      <!-- English Single Alphabet Board -->
+      <div class="keyboard-board" id="boardEnglishSingle">
+        <!-- Rendered dynamically in app.js (A, B, C...) -->
+      </div>
+      
+      <!-- English Blends Board -->
+      <div class="keyboard-board" id="boardEnglishBlends" style="display: none;">
+        <!-- Rendered dynamically in app.js (CH, SH, BL...) -->
+      </div>
+
+      <!-- Hindi Single Alphabet Board -->
+      <div class="keyboard-board" id="boardHindiSingle" style="display: none;">
+        <!-- Rendered dynamically in app.js (अ, आ, क...) -->
+      </div>
+      
+      <!-- Hindi Blends Board -->
+      <div class="keyboard-board" id="boardHindiBlends" style="display: none;">
+        <!-- Rendered dynamically in app.js (क्ष, त्र, ज्ञ...) -->
+      </div>
+
+      <!-- Keyboard section toggles for testing -->
+      <div class="keyboard-toggles" id="keyboardTogglesRow">
+        <button class="keyboard-tab-btn active" id="tabEnSingle">Single Letters</button>
+        <button class="keyboard-tab-btn" id="tabEnBlends">Multi-Letter Blends</button>
+      </div>
+    </section>
+
+    <!-- TELEMETRY DEV LOG WINDOW -->
+    <footer class="console-card">
+      <div class="console-header">
+        <span>🤖 Playroom Engine & Telemetry Stream (Web Speech API logs)</span>
+        <span style="color: var(--pastel-yellow); font-family: monospace; font-size: 0.85rem;">STATUS: ACTIVE</span>
+      </div>
+      <div class="console-logs" id="consoleLogsStream">
+        [System Initialization] Ready for drawing & text-to-speech triggers...
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
